@@ -8,8 +8,9 @@
 int main(void)
 {
 printf("I am writing a beautiful code that passes the Betty checks\n");
-return(0);
+return (0);
 }
+
 {
 int a = 1;
 int b = 2;
