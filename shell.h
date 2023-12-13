@@ -23,6 +23,20 @@
 #define HIST_FILE	".simple_shell_history"
 #define CONVERT_LOWERCASE	1
 #define CONVERT_UNSIGNED	2
+
+#ifndef INFOR_DEFINED
+#define INFOR_DEFINED
+
+struct infor
+{
+int linecount_flag;
+int env_changed;
+int status;
+unsigned int line_count;
+int readfile_descr;
+};
+#define INFO_INIT { 0, 0, 0, 0, 0 }
+#endif
 extern char **environ;
 
 /**
@@ -89,10 +103,6 @@ int readfile_descr;
 int histcount;
 }
 infor;
-
-#define INFO_INIT \
-{NULL, NULL, NULL, 0, 0, 0, 0, NULL, NULL, NULL, NULL, NULL, 0, 0, NULL, \
-0, 0, 0}
 
 /**
 *struct builtin - contains builtin string & function
