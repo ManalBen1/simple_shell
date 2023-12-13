@@ -27,6 +27,14 @@
 #ifndef INFOR_DEFINED
 #define INFOR_DEFINED
 
+/**
+* struct infor-This struct holds information about something.
+* @line_count:Count of lines
+* @readfile_descr: File descriptor for reading
+* @status: Status information
+* @env_changed: Flag for environment changes
+* @linecount_flag: Flag for line count
+*/
 struct infor
 {
 int linecount_flag;
@@ -94,8 +102,9 @@ list_t *history;
 list_t *alias;
 char **cmd_buf;
 /**
-* pointer to cmd, chain buffer, for memory mangement
-* CMD_type ||, &&, ;
+* @ cmd_buf_type: cmd_type-specifies command type: ||, &&, ;
+* @ histcount: Counter for command history
+* @ readfile_descr: File descriptor for reading
 */
 
 int cmd_buf_type;
