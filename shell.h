@@ -62,6 +62,7 @@ struct liststr *next;
 } list_t;
 
 /**
+
 *struct pass_infor - contains pseudo-arguements to pass into a function,
 *allowing uniform prototype for function pointer struct
 *@arg: string generated from getline with args
@@ -82,6 +83,9 @@ struct liststr *next;
 *@status: return status of the last exec'd command
 *@cmd_buf: address of pointer to cmd_buf on if chaining
 *@cmd_buf_type: CMD_type ||, &&, ;
+* @ cmd_buf_type: cmd_type-specifies command type: ||, &&, ;
+* @ histcount: Counter for command history
+* @ readfile_descr: File descriptor for reading
 */
 
 typedef struct pass_infor
@@ -101,12 +105,6 @@ list_t *env;
 list_t *history;
 list_t *alias;
 char **cmd_buf;
-/**
-* @ cmd_buf_type: cmd_type-specifies command type: ||, &&, ;
-* @ histcount: Counter for command history
-* @ readfile_descr: File descriptor for reading
-*/
-
 int cmd_buf_type;
 int readfile_descr;
 int histcount;
