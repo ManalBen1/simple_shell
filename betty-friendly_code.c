@@ -1,4 +1,6 @@
 #include <stdio.h>
+#include <stdlib.h>
+#include "shell.h"
 
 /**
 * main - The entry point of the program.
